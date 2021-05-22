@@ -21,6 +21,13 @@ function resetCount(){
     countDisplay.innerHTML = `<mark> ${count} </mark>`;
 }
 
+function switchTheme(theme){
+    document.querySelector('body').className = theme;
+    document.querySelector('main').className = theme;
+    document.querySelectorAll('button').forEach(item => {
+        item.className = theme });
+    }
+
 increaseBtn.addEventListener('click', incrementCount);
 decreaseBtn.addEventListener('click', decrementCount);
 resetBtn.addEventListener('click', resetCount);
